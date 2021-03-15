@@ -1,0 +1,4 @@
+applications:
+  - name: soup-back
+    host: soup-back
+    memory: 256M
