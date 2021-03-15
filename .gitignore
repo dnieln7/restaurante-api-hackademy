@@ -1,0 +1,6 @@
+/.idea/
+/credentials.json
+/node_modules/
+/.env
+/.clinic/
+/sequelize/config/config.json
