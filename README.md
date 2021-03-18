@@ -5,7 +5,7 @@ Backend para el reto restaurante, este backend estará alojado en IBM Cloud Foun
 ## Endpoints (Nombre - Método)
 
 * /meals - GET : Retorna una lista con todos los platillos registrados.
-* /meals - Post : Recibe un JSON con 4 atributos; name (string), description (string), price (number), picture (string) para crear un nuevo registro de platillo con un id automático.
+* /meals - POST : Recibe un JSON con 4 atributos; name (string), description (string), price (number), picture (string) para crear un nuevo registro de platillo con un id automático.
 
 ## Esquema BD
 
