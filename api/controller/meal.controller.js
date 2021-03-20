@@ -1,15 +1,18 @@
+const secureRouter = require('express').Router();
+const router = require('express').Router();
+
 const {tb_meal} = require("../../sequelize/models");
 const {getResponse} = require("./utils");
 
-function get(req, res) {
+router.get('/', (req, res) => {
     tb_meal.findAll()
         .then(meals => res.status(200).send(getResponse(true, "", meals)))
         .catch(reason => {
             res.status(500).send(getResponse(false, "There was an error", reason));
         });
-}
+});
 
-function post(req, res) {
+secureRouter.post('/', (req, res) => {
     const meal = {
         name: req.body.name,
         description: req.body.description,
@@ -22,9 +25,9 @@ function post(req, res) {
         .catch(reason => {
             res.status(500).send(getResponse(false, "There was an error", reason));
         });
-}
+});
 
 module.exports = {
-    get,
-    post
+    router,
+    secureRouter
 }
